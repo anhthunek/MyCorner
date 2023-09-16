@@ -1,0 +1,39 @@
+.wrapper {
+    position: relative;
+}
+.slide-item {
+    position: relative;
+}
+.thumbnail {
+    position: relative;
+    
+    img {
+        width: 100%;
+        opacity: 0.9;
+    }
+    
+}
+.content {
+    position: absolute;
+    top: 23%;
+    left: 7%;
+    z-index: 1;
+    max-width: 380px;
+    background-color: #00000014;
+    padding: 5px 20px 20px 20px ;
+    h2 {
+        font-size: 6rem;
+        color: var(--primary-color-white);
+        letter-spacing: 2px;
+        font-family: 'Quicksand', sans-serif;
+        margin-bottom: 20px;
+    }
+    p {
+        color: var(--primary-color-white);
+        font-family: 'Quicksand', sans-serif;
+        margin-bottom: 40px;
+        font-size: 1.9rem;
+        font-style: italic;
+    }
+ 
+}

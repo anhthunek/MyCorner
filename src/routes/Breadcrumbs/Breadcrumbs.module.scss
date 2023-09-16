@@ -1,0 +1,27 @@
+.wrapper {
+    font-size: 1.4rem;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-bottom: 1px solid #bbbbbb59;
+
+}
+.breadcrumb {
+    padding: 0 10px;
+}
+.chevron-right {
+    // font-size: 1.2rem
+}
+.breadcrumb-not-active,.chevron-right {
+    color: #999;
+}
+
+.breadcrumb-active {
+    color: var(--secondary-color);
+}
+
+.breadcrumb-arrow {
+    margin-left: 10px;
+    margin-right: 10px;
+}

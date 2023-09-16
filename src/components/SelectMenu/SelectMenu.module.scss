@@ -1,0 +1,24 @@
+.wrapper {
+    // display: none;
+
+}
+.d-none {
+    // display: none;
+    transform:translateY(-10px) ;
+    visibility: hidden;
+    opacity: 0;
+}
+.d-block {
+    transform:translateY(3px) ;
+    visibility: visible;
+    opacity: 1;
+}
+.menu-btn {
+    width: 100%;
+    border-radius: 0;
+    text-align: left;
+}
+.active {
+    // border: 1px solid var(--secondary-color);
+    // color: var(--secondary-color);
+}
