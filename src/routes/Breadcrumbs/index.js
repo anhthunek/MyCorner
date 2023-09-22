@@ -21,7 +21,7 @@ function Breadcrumbs(props) {
                 <FontAwesomeIcon icon={faChevronRight} />
             </span>
             <Link
-                to="/product"
+                to={props.path}
                 className={cx(
                     'breadcrumb',
                     location.pathname.startsWith(props.path) ? 'breadcrumb-active' : 'breadcrumb-not-active',

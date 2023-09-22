@@ -15,7 +15,7 @@ function MainLayout({ children }) {
         <div>
             <div className={cx('wrapper')}>
                 <Header idMenuActive={1} />
-                <Swiper
+                {/* <Swiper
                     autoplay={{
                         delay: 3000,
                         disableOnInteraction: true,
@@ -53,7 +53,7 @@ function MainLayout({ children }) {
                             </div>
                         </div>
                     </SwiperSlide>
-                </Swiper>
+                </Swiper> */}
             </div>
 
             <div>{children}</div>

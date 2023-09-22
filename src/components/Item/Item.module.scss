@@ -1,7 +1,7 @@
 .wrapper {
     min-width: 200px;
-    height: auto;
-    margin: 0 20px 20px 20px;
+    // height: auto;
+    margin: 0 12px 12px 12px;
     overflow: hidden;
     position: relative;
     &:hover {
@@ -12,7 +12,6 @@
             }
             .behind-img {
                 z-index: 1;
-                // transform: scale(0.99);
             }
         }
         .quick-action {
@@ -29,6 +28,7 @@
     position: relative;
     display: block;
     min-height: 250px;
+    overflow: hidden;
     img {
         width: 100%;
         position: absolute;

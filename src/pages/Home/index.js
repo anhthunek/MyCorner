@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import Item from '~/components/Item';
 import { images } from '~/assets/images';
 import BlockTitle from '~/components/BlockTitle';
+import Footer from '~/components/Layouts/Footer';
 
 const cx = classNames.bind(Styles);
 function Home() {
@@ -95,6 +96,7 @@ function Home() {
                     />
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 }

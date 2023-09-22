@@ -40,7 +40,7 @@ const menuItem = [
 
 function Header({idMenuActive, className}) {
     const [selected, setSelected] = useState(idMenuActive);
-    console.log(selected);
+
     const isHovered = (i) => {
         setSelected(i);
     };
@@ -64,29 +64,17 @@ function Header({idMenuActive, className}) {
                         </Link>
                     ))}
                 </div>
-                {/* <div className={cx('menu-top')}>
-                    <a className={cx('menu-list', 'active')} href="">
-                        Home
-                        
-                    </a>
-                    <a className={cx('menu-list')} href="">
-                        Products
-                        
-                    </a>
-                    <a href="">Contact</a>
-                    <a href="">About</a>
-                </div> */}
                 <div className={cx('actions')}>
-                    <button>
-                        <FontAwesomeIcon className={cx('action-btn')} icon={faMagnifyingGlass} />
-                    </button>
+                    <a href='' className={cx('action-btn')} >
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </a>
 
-                    <button>
-                        <FontAwesomeIcon className={cx('action-btn')} icon={faCartPlus} />
-                    </button>
-                    <button>
-                        <FontAwesomeIcon className={cx('action-btn')} icon={faUser} />
-                    </button>
+                    <a href='' className={cx('action-btn')} >
+                        <FontAwesomeIcon icon={faCartPlus} />
+                    </a>
+                    <a href='' className={cx('action-btn')} >
+                        <FontAwesomeIcon icon={faUser} />
+                    </a>
                 </div>
             </div>
         </header>

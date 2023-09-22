@@ -21,8 +21,7 @@ const publicRoutes = [
     },
     {
       path: '/about',
-      component: About,
-      layout: MainLayout,
+      component: About
     }
 ]
 export {publicRoutes}

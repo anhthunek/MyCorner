@@ -1,0 +1,216 @@
+[
+    {
+        "id": 1,
+        "name": "Clothes1",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Women",
+        "price": 58
+
+    },
+    {
+        "id": 2,
+        "name": "Da",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Women",
+        "price" : 29
+    },
+    {
+        "id": 3,
+        "name": "Furniture",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/5155733/pexels-photo-5155733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Men",
+        "price": 78
+    },
+    {
+        "id": 4,
+        "name": "Shoes",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/11822624/pexels-photo-11822624.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Men",
+        "price": 34.6
+    },
+    {
+        "id": 5,
+        "name": "Others",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Women",
+        "price": 78.3
+    },
+    {
+        "id": 6,
+        "name": "Games",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Unisex",
+        "price": 20.98
+    },
+    {
+        "id": 7,
+        "name": "Cell Phone",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Women",
+        "price": 57.23
+    },
+    {
+        "id": 8,
+        "name": "New Category",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Unisex",
+        "price": 63.2
+    },
+    {
+        "id": 9,
+        "name": "New Category",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Unisex",
+        "price": 47.3
+    },
+    {
+        "id": 10,
+        "name": "New Category",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/5612320/pexels-photo-5612320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Men",
+        "price": 38
+    },
+    {
+        "id": 11,
+        "name": "New Category",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Women",
+        "price": 56
+    },
+    {
+        "id": 12,
+        "name": "New Category",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/5612320/pexels-photo-5612320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Men",
+        "price": 53
+    },
+    {
+        "id": 13,
+        "name": "New Category",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Men",
+        "price": 49
+    },
+    {
+        "id": 14,
+        "name": "New Category",
+        "gender": "Men",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/2594861/pexels-photo-2594861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "price": 59
+    },
+    {
+        "id": 15,
+        "name": "New Category",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Unisex",
+        "price": 48
+    },
+    {
+        "id": 16,
+        "name": "New Category",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Women",
+        "price": 102
+    },
+    {
+        "id": 17,
+        "name": "New Category",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Unisex",
+        "price": 85
+    },
+    {
+        "id": 18,
+        "name": "New Category",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Women",
+        "price": 63
+    },
+    
+    {
+        "id": 19,
+        "name": "New Category",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Women",
+        "price": 49
+    },
+    
+    {
+        "id": 20,
+        "name": "New Category",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Women",
+        "price": 39
+    },
+    
+    {
+        "id": 21,
+        "name": "New Category",
+        "image": {
+            "image1": "https://images.pexels.com/photos/1763479/pexels-photo-1763479.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "image2": "https://images.pexels.com/photos/16656622/pexels-photo-16656622/free-photo-of-curly-haired-woman-on-sunny-day.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        },
+        "gender": "Women",
+        "price": 71
+    }
+]

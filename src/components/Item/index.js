@@ -8,7 +8,7 @@ import Button from '../Button';
 const cx = classNames.bind(Styles);
 function Item(props) {
     return (
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper', props.className)}>
             <a className={cx('thumbnail')}>
                 <img className={cx('front-img')} src={props.src1} alt="Item-1" />
                 <img className={cx('behind-img')} src={props.src2} alt="Item-2" />
@@ -26,7 +26,7 @@ function Item(props) {
                     <p className={cx('item-name')}>{props.name}</p>
                 </a>
                 <p className={cx('price')}>
-                    <span className={cx('main-price')}>{props.main_price}</span>
+                    <span className={cx('main-price')}>{props.main_price}$</span>
                     <span className={cx('offer-price')}>{props.offer_price}</span>
                 </p>
                 <Button secondary>BUY NOW</Button>

@@ -1,5 +1,6 @@
 const images = {
     logo: require('./logo.svg').default,
+    logo2: require('./logo2.svg').default,
     slideImage: {
         thumbnail1: require('./thumbnail1.jpg'),
         thumbnail2: require('./thumbnail2.jpeg'),

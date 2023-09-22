@@ -6,7 +6,7 @@
     min-width: 105px;
     padding: 6px 15px;
     cursor: pointer;
-    
+
     // border-radius: 40px;
 }
 .primary {
@@ -19,28 +19,23 @@
         color: black;
     }
 }
-.select {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 200px;
-}
+
 .transparent {
     background-color: transparent;
     border: 1px solid #bbbbbb59;
     border-radius: 5px;
     font-weight: 300;
     font-size: 1.4rem;
+
     &:hover {
         // background-color: var(--primary-color-black);
         color: var(--secondary-color);
         border: 1px solid var(--secondary-color);
-        
     }
 }
+
 .secondary {
-    
-    border: 2px solid var(--secondary-color);
+    border: 1px solid var(--secondary-color);
     background-color: var(--secondary-color);
     color: var(--primary-color-white);
     &:hover {

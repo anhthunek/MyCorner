@@ -1,7 +1,9 @@
 .wrapper {
-    max-width: 262px;
+    // max-width: 200px;
+    width: 200px;
     background: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
-    border-radius: 8px;
     transition: 0.3s ease;
+    position: absolute;
+    z-index: 99;
 }

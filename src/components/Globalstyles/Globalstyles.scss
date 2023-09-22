@@ -28,7 +28,8 @@ a {
     text-decoration: none;
     color: var(--primary-color-black);
 }
-input, select {
+input,
+select {
     outline: none;
     border: none;
     font-family: 'Poppins', sans-serif;
@@ -37,13 +38,16 @@ button {
     background-color: transparent;
     cursor: pointer;
     border: none;
+
     font-size: var(--primary-size);
     font-weight: 500;
     user-select: none;
 }
 .swiper-slide {
     height: 600px;
+
 }
+
 .swiper-pagination {
     position: absolute;
     bottom: 10px;
