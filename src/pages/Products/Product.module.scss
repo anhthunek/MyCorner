@@ -56,6 +56,9 @@
             color: var(--secondary-color);
         }
     }
+    &:last-of-type {
+        border: none;
+    }
 }
 .product-container {
     width: 80%;

@@ -12,11 +12,15 @@ import Footer from '~/components/Layouts/Footer';
 import JSONs from '~/data.json';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import { json } from 'react-router-dom';
 const cx = classNames.bind(Styles);
 
-const Menu = ['Choose Sex', 'Women', 'Men', 'Unisex'];
-const Menu2 = ['Choose Price', 'From highest to lowest', 'From lowest to highest'];
-const Menu3 = ['Choose Type', 'Clothes', 'Accessories'];
+const Menu = [
+    ['Availability', 'In Stock', 'Out Of Stock'],
+    ['Gender', 'Women', 'Men', 'Unisex'],
+    ['Type', 'Clothes', 'Accessories'],
+    ['Price', 'From highest to lowest', 'From lowest to highest'],
+];
 
 function Product() {
     const [sum, setSum] = useState(21);
@@ -33,8 +37,7 @@ function Product() {
     for (let i = 1; i <= Math.ceil(sum / showing); i++) {
         row.push(i);
     }
-    
-    
+
     const onFilter = allPosts.filter((product) => {
         if (selectItem === 'Women') {
             return product.gender === 'Women';
@@ -44,70 +47,44 @@ function Product() {
             return product.gender === 'Unisex';
         } else return product;
     });
-    useEffect (()=> {
-        setSum(onFilter.length)
-        setShowing (onFilter.length>8 ? 8 : sum)
+    useEffect(() => {
+        setSum(onFilter.length);
+        setShowing(onFilter.length > 8 ? 8 : sum);
     }, [onFilter.length, sum]);
 
     const currentResult = onFilter.slice(indexFirstPost, indexLastPost);
 
     const handleFilter = (item) => {
         setSelectItem(item);
-        setCurrentPage(1)
-    }; 
+        setCurrentPage(1);
+    };
     const handleClickFilter = () => {
         setActive(active === 'active' ? null : 'active');
         setShowFilterBar(showFilterBar === false ? true : false);
-        
     };
     const handleClickPagiation = (item) => {
         setCurrentPage(item);
-        
     };
 
     // handle();
     return (
         <div className={cx('wrapper')}>
-            <Header idMenuActive={2} className={cx('p-relative')} />
+            <Header className={cx('p-relative')} />
             <Breadcrumbs name="Products" path="/product" />
             <div className={cx('product-filter')}>
                 <div className={cx('category-sidebar')}>
-                    <div className={cx('sidebar-title')}>
-                        <h2>Gender</h2>
-                        <ul className={cx('category-list')}>
-                            <li className={cx('category-item')}>
-                                <a href="">Women (20)</a>
-                            </li>
-                            <li className={cx('category-item')}>
-                                <a href="">Men (10)</a>
-                            </li>
-                            <li className={cx('category-item')}>
-                                <a href="">Unisex (7)</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className={cx('sidebar-title')}>
-                        <h2>Type</h2>
-                        <ul className={cx('category-list')}>
-                            <li className={cx('category-item')}>
-                                <a href="">Clothes (30)</a>
-                            </li>
-                            <li className={cx('category-item')}>
-                                <a href="">Accessories (10)</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className={cx('sidebar-title')}>
-                        <h2>Available</h2>
-                        <ul className={cx('category-list')}>
-                            <li className={cx('category-item')}>
-                                <a href="">In Stock (20)</a>
-                            </li>
-                            <li className={cx('category-item')}>
-                                <a href="">Out of Stock (10)</a>
-                            </li>
-                        </ul>
-                    </div>
+                    {Menu.slice(0, 3).map((menu) => (
+                        <div className={cx('sidebar-title')}>
+                            <h2>{menu[0]}</h2>
+                            <ul className={cx('category-list')}>
+                                {menu.slice(1, 4).map((item) => (
+                                    <li className={cx('category-item')}>
+                                        <a href="">{item} (20)</a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
                 </div>
                 <div className={cx('product-container')}>
                     <div className={cx('filter-actions')}>
@@ -122,16 +99,19 @@ function Product() {
                             </Button>
                         </div>
                         <p className={cx('display-result')}>
-                            {active
-                                ? `Displaying ${showing} of ${sum} results`
-                                : `All Products (${sum})`}
+                            {active ? `Displaying ${showing} of ${sum} results` : `All Products (${sum})`}
                             {/* Displaying 15 of 30 results */}
                         </p>
                     </div>
                     <div className={cx('filter-bar')}>
-                        <SelectMenu showFilterBar={showFilterBar} handleFilter={handleFilter} items={Menu} />
-                        <SelectMenu showFilterBar={showFilterBar} handleFilter={handleFilter} items={Menu2} />
-                        <SelectMenu showFilterBar={showFilterBar} handleFilter={handleFilter} items={Menu3} />
+                        {Menu.slice(1, 4).map((menu) => (
+                            <SelectMenu
+                                key={menu}
+                                showFilterBar={showFilterBar}
+                                handleFilter={handleFilter}
+                                items={menu}
+                            />
+                        ))}
                     </div>
                     <div className={cx('product-block', showFilterBar ? 'translateY' : '')}>
                         {currentResult.map((json) => (
@@ -144,7 +124,7 @@ function Product() {
                                 main_price={json.price}
                                 offer_price="$45.55"
                             />
-                        )) }
+                        ))}
                     </div>
                     <nav className={cx('pagination')}>
                         <ul>

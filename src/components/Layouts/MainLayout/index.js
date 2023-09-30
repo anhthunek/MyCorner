@@ -14,7 +14,7 @@ function MainLayout({ children }) {
     return (
         <div>
             <div className={cx('wrapper')}>
-                <Header idMenuActive={1} />
+                <Header/>
                 {/* <Swiper
                     autoplay={{
                         delay: 3000,

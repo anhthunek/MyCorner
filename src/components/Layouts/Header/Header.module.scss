@@ -1,20 +1,20 @@
 .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    display: unset;
+    width: 100%;  
 }
 .container {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--primary-color-white);
     width: 87%;
-    margin: 10px 0;
-    background-color: #ffffff91;
-    // background-color: aquamarine;
+    margin: 30px auto;
     padding: 20px;
     border-radius: 10px;
+    position: sticky;
+    top: 20px;
+    z-index: 100;
 }
 .logo_img {
 }
@@ -26,15 +26,16 @@
 .menulist {
     font-weight: 500;
     margin: 0 20px;
+    transition: 0.3s ease;
+    &:hover {
+        color: var(--secondary-color);
+    }
 }
 .icon-right {
     font-size: 1.2rem;
     padding-left:  4px;
 }
-.active {
-    transition: 0.3s ease;
-    color: var(--secondary-color);
-}
+
 .actions {
     display: flex;
     align-items: center;

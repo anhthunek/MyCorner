@@ -5,8 +5,6 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FrameMenu from '../Frame';
 import { useEffect, useRef, useState } from 'react';
-import Item from '../Item';
-import { images } from '~/assets/images';
 
 const cx = classNames.bind(Styles);
 function SelectMenu({ items, showFilterBar, handleFilter }) {

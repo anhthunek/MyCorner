@@ -9,70 +9,65 @@ import 'tippy.js/dist/tippy.css';
 import HeadlessTippy from '@tippyjs/react/headless';
 import Button from '~/components/Button';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const cx = classNames.bind(Styles);
 
 const menuItem = [
     {
         id: 1,
-        href: "/",
+        href: '/',
         name: 'Home',
         icon: <FontAwesomeIcon className={cx('icon-right')} icon={faChevronDown} />,
     },
     {
         id: 2,
-        href: "/product",
+        href: '/product',
         name: 'Products',
         icon: <FontAwesomeIcon className={cx('icon-right')} icon={faChevronDown} />,
     },
     {
         id: 3,
-        href: "/contact",
+        href: '/contact',
         name: 'Contact',
     },
     {
         id: 4,
-        href: "/about",
+        href: '/about',
         name: 'About',
     },
 ];
 
-function Header({idMenuActive, className}) {
-    const [selected, setSelected] = useState(idMenuActive);
-
-    const isHovered = (i) => {
-        setSelected(i);
-    };
+function Header() {
+    const [active, setActive] = useState();
     return (
-        <header className={cx('wrapper', className)}>
+        <header className={cx('wrapper')}>
             <div className={cx('container')}>
                 <div className={cx('logo_img')}>
                     <img src={images.logo} alt="Belle" />
                 </div>
 
                 <div className={cx('menu-top')}>
-                    {menuItem.map((item) => (
-                        <Link
-                         to={item.href} 
-                         className={selected === item.id ? cx("menulist","active"): cx("menulist")}
-                         onMouseOver={()=> isHovered(item.id)}
-                         onMouseOut={()=> isHovered(idMenuActive)}
-                         key={item.id}
-                         >
+                    {menuItem.map((item, index) => (
+                        <NavLink
+                            to={item.href}
+                            //  onMouseOver={()=> isHovered(item.id)}
+
+                            style={({ isActive }) => ({
+                                color: isActive ? '#116466' : '',
+                            })}
+                            className={cx('menulist')}
+                            key={index}
+                        >
                             {item.name} {item.icon}
-                        </Link>
+                        </NavLink>
                     ))}
                 </div>
                 <div className={cx('actions')}>
-                    <a href='' className={cx('action-btn')} >
-                        <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    </a>
-
-                    <a href='' className={cx('action-btn')} >
+                    <a href="" className={cx('action-btn')}>
                         <FontAwesomeIcon icon={faCartPlus} />
                     </a>
-                    <a href='' className={cx('action-btn')} >
+                    <a href="" className={cx('action-btn')}>
                         <FontAwesomeIcon icon={faUser} />
                     </a>
                 </div>

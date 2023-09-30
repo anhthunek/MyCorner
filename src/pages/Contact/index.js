@@ -10,7 +10,7 @@ const cx2 = classNames.bind(Styles2);
 function Contact() {
     return (
         <div>
-            <Header idMenuActive={3} className={cx2('p-relative')} />
+            <Header className={cx2('p-relative')} />
             <Breadcrumbs name = "Contact" path = "/contact"/>
             <Footer/>
         </div>
