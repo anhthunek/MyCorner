@@ -14,14 +14,17 @@ const publicRoutes = [
     {
       path: '/product',
       component: Product,
+      layout: MainLayout
     },
     {
       path: '/contact',
       component: Contact,
+      layout: MainLayout
     },
     {
       path: '/about',
-      component: About
+      component: About,
+      layout: MainLayout
     }
 ]
 export {publicRoutes}

@@ -69,7 +69,6 @@ function Product() {
     // handle();
     return (
         <div className={cx('wrapper')}>
-            <Header className={cx('p-relative')} />
             <Breadcrumbs name="Products" path="/product" />
             <div className={cx('product-filter')}>
                 <div className={cx('category-sidebar')}>
@@ -159,7 +158,6 @@ function Product() {
                     </nav>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }

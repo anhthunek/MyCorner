@@ -4,9 +4,7 @@ import Breadcrumbs from "~/routes/Breadcrumbs";
 
 function About() {
     return <div>
-        <Header/>
         <Breadcrumbs name = "About" path = "/about"/>
-        <Footer/>
     </div>;
 }
 

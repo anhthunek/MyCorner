@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faCartPlus, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faCartPlus, faChevronDown, faArrowRight, faLitecoinSign } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import Styles from './Header.module.scss';
 import classNames from 'classnames/bind';
@@ -39,7 +39,6 @@ const menuItem = [
 ];
 
 function Header() {
-    const [active, setActive] = useState();
     return (
         <header className={cx('wrapper')}>
             <div className={cx('container')}>
@@ -51,8 +50,6 @@ function Header() {
                     {menuItem.map((item, index) => (
                         <NavLink
                             to={item.href}
-                            //  onMouseOver={()=> isHovered(item.id)}
-
                             style={({ isActive }) => ({
                                 color: isActive ? '#116466' : '',
                             })}
@@ -64,12 +61,13 @@ function Header() {
                     ))}
                 </div>
                 <div className={cx('actions')}>
-                    <a href="" className={cx('action-btn')}>
+                    {/* <a href="" className={cx('action-btn')}>
                         <FontAwesomeIcon icon={faCartPlus} />
-                    </a>
-                    <a href="" className={cx('action-btn')}>
+                    </a> */}
+                    {/* <a href="" className={cx('action-btn')}>
                         <FontAwesomeIcon icon={faUser} />
-                    </a>
+                    </a> */}
+                    <Button transparent iconRight={<FontAwesomeIcon icon={faUser}/>}>Login</Button>
                 </div>
             </div>
         </header>

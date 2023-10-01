@@ -1,102 +1,61 @@
-import Frame from '~/components/Frame';
 import Styles from './Home.module.scss';
 import classNames from 'classnames/bind';
-import Item from '~/components/Item';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import Button from '~/components/Button';
 import { images } from '~/assets/images';
-import BlockTitle from '~/components/BlockTitle';
-import Footer from '~/components/Layouts/Footer';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const cx = classNames.bind(Styles);
 function Home() {
     return (
-        <div>
-            <div className={cx('wrapper')}>
-                <BlockTitle
-                    span = "Newest"
-                    h2 = "Items"
-                />
-                <div className={cx('item-list')}>
-                    <Item
-                        src1={images.itemImage.thumbnail1_1}
-                        src2={images.itemImage.thumbnail1_2}
-                        name="Rosé Skirt Vintage"
-                        main_price="$34"
-                        offer_price="$39.55"
-                    />
-                    <Item
-                        src2={images.itemImage.thumbnail2_1}
-                        src1={images.itemImage.thumbnail2_2}
-                        name="Modern Cardigan "
-                        main_price="$80"
-                        offer_price="$100.27"
-                    />
-                    <Item
-                        src1={images.itemImage.thumbnail3_2}
-                        src2={images.itemImage.thumbnail3_1}
-                        name="Coat Men Gray"
-                        main_price="$68.56"
-                        offer_price="$80.15"
-                    />
-                    <Item
-                        src1={images.itemImage.thumbnail3_1}
-                        src2={images.itemImage.thumbnail3_2}
-                        name="Hat Weather Vintage"
-                        main_price="$28.54"
-                        offer_price="$29"
-                    />
-                    <Item
-                        src1={images.itemImage.thumbnail2_1}
-                        src2={images.itemImage.thumbnail2_2}
-                        name="Rosé Skirt Vintage"
-                        main_price="$40"
-                        offer_price="$45.55"
-                    />
+        <div className={cx('wrapper')}>
+            <div className={cx('slide-container')}>
+                <div className={cx('slide-area')}>
+                    <Swiper
+                        autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: true,
+                        }}
+                        loop={true}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        navigation={true}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        spaceBetween={0}
+                        slidesPerView={1}
+                        onSlideChange={() => console.log('slide change')}
+                    >
+                        <SwiperSlide>
+                            <div className={cx('slide-item')}>
+                                <div className={cx('thumbnail')}>
+                                    <img src="https://placehold.co/850x400" alt="" />
+                                </div>
+                                {/* <div className={cx('content')}>
+                                    <h2>New Collection For Women</h2>
+                                    <p>From Hight to low, classic or modern. We have you covered</p>
+                                    <Button primary>Read more</Button>
+                                </div> */}
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className={cx('slide-item')}>
+                                <div className={cx('thumbnail')}>
+                                    <img src="https://placehold.co/850x400" alt="" />
+                                </div>
+                                {/* <div className={cx('content')}>
+                                    <h2>New Collection For Men</h2>
+                                    <p>From Hight to low, classic or modern. We have you covered</p>
+                                    <Button primary>Read more</Button>
+                                </div> */}
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+                <div className={cx('banner-area')}>
+                    <img src="https://placehold.co/300x400" alt="" />
                 </div>
             </div>
-            <div className={cx('wrapper', 'bg-gray')}>
-            <BlockTitle
-                    span = "Hottest"
-                    h2 = "Items"
-                />
-                <div className={cx('item-list')}>
-                    <Item
-                        src1={images.itemImage.thumbnail1_1}
-                        src2={images.itemImage.thumbnail1_2}
-                        name="Rosé Skirt Vintage"
-                        main_price="$34"
-                        offer_price="$39.55"
-                    />
-                    <Item
-                        src2={images.itemImage.thumbnail2_1}
-                        src1={images.itemImage.thumbnail2_2}
-                        name="Modern Cardigan "
-                        main_price="$80"
-                        offer_price="$100.27"
-                    />
-                    <Item
-                        src1={images.itemImage.thumbnail3_2}
-                        src2={images.itemImage.thumbnail3_1}
-                        name="Coat Men Gray"
-                        main_price="$68.56"
-                        offer_price="$80.15"
-                    />
-                    <Item
-                        src1={images.itemImage.thumbnail3_1}
-                        src2={images.itemImage.thumbnail3_2}
-                        name="Hat Weather Vintage"
-                        main_price="$28.54"
-                        offer_price="$29"
-                    />
-                    <Item
-                        src1={images.itemImage.thumbnail2_1}
-                        src2={images.itemImage.thumbnail2_2}
-                        name="Rosé Skirt Vintage"
-                        main_price="$40"
-                        offer_price="$45.55"
-                    />
-                </div>
-            </div>
-            <Footer/>
         </div>
     );
 }
