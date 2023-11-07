@@ -5,6 +5,9 @@ import {
     faChevronDown,
     faArrowRight,
     faLitecoinSign,
+    faArrowRightFromFile,
+    faArrowRightFromBracket,
+    faArrowUpRightFromSquare,
 } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import Styles from './Header.module.scss';
@@ -77,7 +80,7 @@ function Header({show}) {
                             </a>
                         </>
                     ) : (
-                        <Button to="/login" transparent iconRight={<FontAwesomeIcon icon={faUser} />}>
+                        <Button to="/login" transparent  iconLeft={<FontAwesomeIcon icon={faArrowUpRightFromSquare} />}>
                             Login
                         </Button>
                     )}

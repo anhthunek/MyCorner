@@ -3,11 +3,11 @@
     background-color: white;
     border: 1px solid transparent;
     color: rgba(22, 24, 35, 1);
-    max-width: 110px;
     padding: 6px 15px;
     cursor: pointer;
-
-    // border-radius: 40px;
+    &:hover {
+        color: var(--secondary-color);
+    }
 }
 .primary {
     border: 2px solid var(--primary-color-black);
@@ -26,7 +26,6 @@
     border-radius: 5px;
     font-weight: 300;
     font-size: 1.4rem;
-
     &:hover {
         // background-color: var(--primary-color-black);
         color: var(--secondary-color);

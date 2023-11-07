@@ -1,18 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Styles from './Product.module.scss';
 import classNames from 'classnames/bind';
-import Button from '~/components/Button';
-import Header from '~/components/Layouts/Header';
 import Breadcrumbs from '~/routes/Breadcrumbs';
 import { faChevronLeft, faChevronRight, faFilter } from '@fortawesome/free-solid-svg-icons';
-import SelectMenu from '~/components/SelectMenu';
 import React, { useEffect, useState } from 'react';
 import Item from '~/components/Item';
-import Footer from '~/components/Layouts/Footer';
 import JSONs from '~/data.json';
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
-import { json } from 'react-router-dom';
 const cx = classNames.bind(Styles);
 
 const Menu = [
@@ -21,12 +14,12 @@ const Menu = [
     ['Type', 'Clothes', 'Accessories'],
     ['Price', 'From highest to lowest', 'From lowest to highest'],
 ];
+console.log("Hell");
 
 function Product() {
     const [sum, setSum] = useState(21);
     const [showing, setShowing] = useState(8);
     const [active, setActive] = useState('');
-    const [showFilterBar, setShowFilterBar] = useState(true);
     const [currentPage, setCurrentPage] = useState(1);
     const [allPosts] = useState(JSONs);
     const [selectItem, setSelectItem] = useState('');
@@ -58,10 +51,7 @@ function Product() {
         setSelectItem(item);
         setCurrentPage(1);
     };
-    const handleClickFilter = () => {
-        setActive(active === 'active' ? null : 'active');
-        setShowFilterBar(showFilterBar === false ? true : false);
-    };
+
     const handleClickPagiation = (item) => {
         setCurrentPage(item);
     };
@@ -87,32 +77,12 @@ function Product() {
                 </div>
                 <div className={cx('product-container')}>
                     <div className={cx('filter-actions')}>
-                        <div className={cx('filter-btn')}>
-                            <Button
-                                onClick={handleClickFilter}
-                                className={cx(active)}
-                                transparent
-                                iconLeft={<FontAwesomeIcon icon={faFilter} />}
-                            >
-                                Filter
-                            </Button>
-                        </div>
                         <p className={cx('display-result')}>
                             {active ? `Displaying ${showing} of ${sum} results` : `All Products (${sum})`}
                             {/* Displaying 15 of 30 results */}
                         </p>
                     </div>
-                    <div className={cx('filter-bar')}>
-                        {Menu.slice(1, 4).map((menu) => (
-                            <SelectMenu
-                                key={menu}
-                                showFilterBar={showFilterBar}
-                                handleFilter={handleFilter}
-                                items={menu}
-                            />
-                        ))}
-                    </div>
-                    <div className={cx('product-block', showFilterBar ? 'translateY' : '')}>
+                    <div className={cx('product-block')}>
                         {currentResult.map((json) => (
                             <Item
                                 key={json.id}

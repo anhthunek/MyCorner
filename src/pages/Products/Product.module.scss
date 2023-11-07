@@ -65,13 +65,6 @@
     padding: 0 20px;
     
 }
-.filter-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
-    position: relative;
-}
 .active {
     border: 1px solid var(--secondary-color);
     color: var(--secondary-color);
@@ -84,9 +77,6 @@
     transition: 0.3s ease;
     // margin-top: 40px;
 
-}
-.translateY {
-    transform: translateY(-20px);
 }
 .filter-actions {
     display: flex;
@@ -102,6 +92,7 @@
     display: none;
 }
 .display-result {
+    margin-bottom: 30px;
     color: var(--secondary-color);
 }
 
